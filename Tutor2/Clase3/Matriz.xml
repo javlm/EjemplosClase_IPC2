@@ -1,0 +1,24 @@
+<matrices>
+ <matriz nombre="Ejemplo" n="4" m="4">
+ <dato x="1" y="1">2</dato>
+ <dato x="1" y="2">3</dato>
+ <dato x="1" y="3">0</dato>
+ <dato x="1" y="4">4</dato>
+ <dato x="2" y="1">0</dato>
+ <dato x="2" y="2">0</dato>
+ <dato x="2" y="3">6</dato>
+ <dato x="2" y="4">3</dato>
+ <dato x="3" y="1">3</dato>
+ <dato x="3" y="2">4</dato>
+ <dato x="3" y="3">0</dato>
+ <dato x="3" y="4">2</dato>
+ <dato x="4" y="1">1</dato>
+ <dato x="4" y="2">0</dato>
+ <dato x="4" y="3">1</dato>
+ <dato x="4" y="4">5</dato>
+ <dato x="5" y="1">0</dato>
+ <dato x="5" y="2">0</dato>
+ <dato x="5" y="3">3</dato>
+ <dato x="5" y="4">1</dato>
+ </matriz>
+</matrices>
