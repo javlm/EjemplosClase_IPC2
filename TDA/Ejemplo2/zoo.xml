@@ -1,0 +1,28 @@
+<zoologico>
+  <clase clase="mamiferos"  tipo="Sangre Caliente">
+    <animal familia="felino">Tigre</animal>
+    <animal familia="primate">Chimpance</animal>
+    <animal familia="primate">Orangutan</animal>
+    <animal familia="felino">Pantera</animal>
+    <animal familia="felino">Jaguar</animal>
+    <animal familia="primate">Gorila</animal>
+  </clase>
+  <clase clase="aves" tipo="Sangre Caliente">
+    <animal >Aguila</animal>
+    <animal >Pinguino Emperador</animal>
+    <animal >Pajaro Carpintero</animal>
+    <animal >Correcaminos</animal>
+  </clase>
+  <clase clase="reptiles" tipo="Sangre Fria">
+    <animal >Barba Amarilla</animal>
+    <animal >Cobra</animal>
+    <animal >Cocodrilo</animal>
+    <animal >Piton</animal>
+    <animal >Caiman</animal>
+    <animal >Dragon de Comodo</animal>
+  </clase>
+  <clase clase="anfibios" tipo="Sangre Fria">
+    <animal>Rana</animal>
+    <animal>Salamandra</animal>
+  </clase>
+</zoologico>
