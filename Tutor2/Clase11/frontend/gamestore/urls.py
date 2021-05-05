@@ -8,4 +8,5 @@ urlpatterns = [
     path('about/', views.about, name='gamestore-about'),
     path('registro/', views.registro, name='gamestore-registro'),
     path('signup/',views.signup, name='signup'),
+    path('file/',views.enviararchivo, name='file'),
 ]

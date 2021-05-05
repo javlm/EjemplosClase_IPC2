@@ -10,4 +10,7 @@ class RegisterForm(forms.Form):
     lastname = forms.CharField(label="lastname")
     password = forms.CharField(widget=forms.PasswordInput(), label="password")
     username = forms.CharField(label="username")
-    #area = forms.CharField(widget=forms.TextAreaField())
+
+class EntradaForm(forms.Form):
+    file = forms.FileField(label="file")
+    #textarea = forms.CharField(widget=forms.Textarea(attrs={"rows":20, "cols":60}))

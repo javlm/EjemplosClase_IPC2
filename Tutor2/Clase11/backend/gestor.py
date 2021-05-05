@@ -47,3 +47,7 @@ class Gestor:
                 self.games[self.games.index(x)]=game
                 return True
         return False
+    
+    def procesar_archivo(self,f):
+        
+        return {'Estado':'Procesado Correctamente'}

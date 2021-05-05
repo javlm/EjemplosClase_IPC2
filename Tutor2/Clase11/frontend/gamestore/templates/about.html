@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+<form action="/file/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<label for="file">Cargar un archivo</label>
+<br>
+<input type="file"
+       id="file" name="file"
+       accept="text/xml">
+<div>
+    {% if content %}   
+        <textarea label="textarea" name="textarea" rows="20" cols="90">{{content}}</textarea>
+        <textarea label="textarea" name="textarea2" rows="20" cols="90">{{response}}</textarea>
+    {% else %}
+        <textarea label="textarea" name="textarea" rows="20" cols="90"></textarea>
+        <textarea label="textarea" name="textarea2" rows="20" cols="90"></textarea>
+    {% endif %}
+</div>
+<button type="submit" class="btn btn-dark btn-lg">Enviar</button>
+</form>
+</div>
+{% endblock content %}

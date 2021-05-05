@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from .forms import LoginForm, RegisterForm
+from .forms import LoginForm, RegisterForm, EntradaForm
 import requests
 # Create your views here.
 endpoint = 'http://127.0.0.1:5000/'
 def home(request):
-    response = requests.get(endpoint+'games');
+    response= requests.get(endpoint+'games'); #http://127.0.0.1:5000/games
     games = response.json()
     contexto = {
         'games' : games
@@ -12,7 +12,10 @@ def home(request):
     return render(request, 'store.html', contexto)
 
 def about(request):
-    return None
+    context = {
+        'title':'About'
+    }
+    return render(request, 'about.html',context)
 
 def login(request):
     context = {
@@ -62,3 +65,22 @@ def signup(request):
             print('F')
     return render(request, 'login.html', contexto)
 
+def enviararchivo(request):
+    contexto={'content':'', 'response':''}
+    if request.method == 'POST':
+        form = EntradaForm(request.POST, request.FILES)
+        if form.is_valid():
+            filename = request.FILES['file']
+            ruta = 'C:/Users/javes/OneDrive/Desktop/'
+            ruta = ruta + filename.name
+            #contenido = filename.read()
+            with open(ruta, encoding = 'utf-8') as fil:
+                contenido = fil.read()
+            response = requests.post(endpoint+'archivo', data=contenido)
+            contexto = {
+                'content':contenido,
+                'response':response
+            }
+        else:
+            print('no valido')
+    return render(request, 'about.html', contexto)

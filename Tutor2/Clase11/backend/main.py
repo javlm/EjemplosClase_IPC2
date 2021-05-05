@@ -15,10 +15,20 @@ gestor = Gestor()
 def home():
     return "SERVER funciona correctamente."
 
+@app.route('/cargarArchivo')
+def cargar():
+    return "Cargando archivo"
+
 #Obtener juegos
 @app.route('/games')
 def getGames():
     return gestor.obtener_games() 
+
+@app.route('/archivo',methods=['POST'])
+def getfile():
+    datos = request.data
+    json = gestor.procesar_archivo(datos)
+    return json 
 
 #Login
 @app.route('/login/<user>/<password>')
@@ -34,6 +44,7 @@ def registrar_usuario():
     dato=request.json
     gestor.crear_usuario(dato['nombre'],dato['password'],dato['usuario'],dato['apellido'])
     return '{"Estado":"Usuario Creado"}'
+
 
 #Iniciar el servidor
 if __name__ == "__main__":
